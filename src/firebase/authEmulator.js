@@ -17,18 +17,20 @@ connectAuthEmulator(auth, "http://localhost:9099");
 const login = async (email, password) => {
     try {
         await setPersistence(auth, browserSessionPersistence);
-        const userCredentials = await signInWithEmailAndPassword(auth, email, password);
+        await signInWithEmailAndPassword(auth, email, password);
         console.log("success, check local cookies");
+        return;
     } catch (err) {
-        console.log(err.message);
+        throw new Error(err);
     }
 }
 
 const logout = async () => {
     try {
-        await signOut(auth)
+        await signOut(auth);
+        return;
     } catch (err) {
-        console.log(err.message)
+        console.log(err.message);
     }
     
 }
@@ -43,5 +45,6 @@ export default app;
 export {
     auth,
     login,
+    logout,
     getToken
 };

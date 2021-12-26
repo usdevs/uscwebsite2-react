@@ -1,26 +1,25 @@
-import logo from './logo.svg';
+// Style Imports
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+// React Libraries
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+// Components
 import Login from './components/Login'
-import './App.css';
-import { BrowserRouter, Route, Routes, Link } from 'react-router-dom'
-import Home from './components/Home';
+import Home from './components/Home'
+
 
 function App() {
-  return (
-    <div className="App">
-      <img src={logo} alt="logo" width="200px"></img>
-      <BrowserRouter>
-        <nav>
-          <ul>
-            <li><Link to="/login">Login</Link></li>
-          </ul>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home/>}/>
-          <Route path="/login" element={<Login/>}/>
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/login" element={<Login />} />
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
