@@ -7,12 +7,13 @@ function Contact() {
     return (
         <>
         <Navigation></Navigation>
-        <Container style={{paddingLeft:"6rem", paddingRight:"6rem"}}>
+        <Container style={{paddingLeft:"5%", paddingRight:"5%"}} >
             <img
                 src='/img/contact-us-header.jpg' 
                 className="img-fluid" 
-                alt="Cinnamon College against a blue sky"></img>
-                        
+                alt="Cinnamon College against a blue sky"
+                ></img>
+                
 
             <h1 class="text-start display-4 mt-3"> Contact Us </h1>
         </Container>
