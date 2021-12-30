@@ -8,14 +8,15 @@ const API_KEY = config.apiKey;
 
 function Address() {
     return (
-        <Container className="p-3" style={{backgroundColor: "#e9ecef"}} fluid>
+        <Container className="p-5" style={{backgroundColor: "#e9ecef", textAlign:"left"}}>
+            <p className="lead">
             <h4>NUS Students' University Scholars Club</h4>
-            <p>National University of Singapore</p>
-            <p>Cinnamon College, University Town</p>
-            <p>18 College Avenue East S138593</p>
+            National University of Singapore <br/>
+            Cinnamon College, University Town <br/>
+            18 College Avenue East S138593 <br/> <br/>
+            </p>
             <p>If you have any queries or questions regarding the University Scholars Club 
-                and would like to speak to someone, please email 
-                 <a href="mailto:usc.hongensec@u.nus.edu"> usc.hongensec@u.nus.edu.</a>
+                and would like to speak to someone, please email <a href="mailto:usc.hongensec@u.nus.edu">usc.hongensec@u.nus.edu.</a>
             </p>
         </Container>
     )
@@ -36,7 +37,7 @@ function Contact() {
                 <Col md={6}>
                     <iframe
                         title="iframe"
-                        style={{border:0, width:"100%", height:"300px"}}
+                        style={{border:0, width:"100%", height:"400px"}}
                         loading="lazy"
                         allowFullScreen
                         src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}
