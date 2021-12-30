@@ -31,7 +31,7 @@ function Contact() {
                 className="img-fluid" 
                 alt="Cinnamon College against a blue sky"
             ></img>
-            <h1 className="text-start display-4 mt-3"> Contact Us </h1>
+            <h1 className="text-start display-4 my-3"> Contact Us </h1>
             
             <Row>
                 <Col md={6}>
