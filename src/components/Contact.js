@@ -34,7 +34,7 @@ function Contact() {
             <h1 className="text-start display-4 my-3"> Contact Us </h1>
             
             <Row>
-                <Col md={6}>
+                <Col lg={6}>
                     <iframe
                         title="iframe"
                         style={{border:0, width:"100%", height:"400px"}}
@@ -46,11 +46,13 @@ function Contact() {
                     </iframe>
                 </Col>
 
-                <Col md={6} className="mt-4 mt-md-0">
+                <Col lg={6} className="mt-5 mt-md-0">
                     <Address/>
                 </Col>
             </Row>
         </Container>
+
+        
         </>
     )
 }
