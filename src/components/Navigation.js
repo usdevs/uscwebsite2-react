@@ -16,7 +16,7 @@ function Navigation() {
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav>
                         <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="#link">Spaces</Nav.Link>
+                        <Nav.Link href="/spaces">Spaces</Nav.Link>
                         <Nav.Link href="/contact">Contact Us</Nav.Link>
                         <Button href="/login" variant="primary">Login <i className="bi bi-box-arrow-in-right"></i> </Button>
                     </Nav>
