@@ -6,6 +6,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 // Components
 import Login from './components/Login'
+import Spaces from './components/Spaces'
 import Home from './components/Home'
 
 
@@ -16,6 +17,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="/spaces" element={<Spaces />} />
                 </Routes>
             </BrowserRouter>
         </div>
