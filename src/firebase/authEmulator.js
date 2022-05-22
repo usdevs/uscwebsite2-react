@@ -18,7 +18,6 @@ const login = async (email, password) => {
     try {
         await setPersistence(auth, browserSessionPersistence);
         await signInWithEmailAndPassword(auth, email, password);
-        console.log("success, check local cookies");
         return;
     } catch (err) {
         throw new Error(err);
@@ -30,14 +29,26 @@ const logout = async () => {
         await signOut(auth);
         return;
     } catch (err) {
-        console.log(err.message);
+        console.log("[!] FATAL: Error on logout");
     }
     
 }
 
 const getToken = async () => {
-    const token = await auth.currentUser.getIdToken();
-    return token;
+    try {
+        const token = await auth.currentUser.getIdToken();
+        return token;
+    } catch (err) {
+        console.log("[-] No user token found (not logged in?)")
+    }   
+}
+
+const getEmail = async () => {
+    try {
+        return auth.currentUser.email;
+    } catch (err) {
+        console.log("[!] FATAL: No email address found")
+    }
 }
 
 export default app;
@@ -46,5 +57,6 @@ export {
     auth,
     login,
     logout,
-    getToken
+    getToken,
+    getEmail
 };

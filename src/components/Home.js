@@ -2,17 +2,9 @@ import React from 'react'
 import Navigation from './Navigation'
 import { Container, Row, Button } from 'react-bootstrap'
 
-import { logout, getToken } from '../firebase/authEmulator'
+import { getToken } from '../firebase/authEmulator'
 
 function Home() {
-    const doLogout = async () => {
-        try {
-            await logout();
-            console.log("Logged Out")
-        } catch (err) {
-            console.log(err);
-        }
-    }
 
     const checkCookie = async () => {
         try {
@@ -33,7 +25,6 @@ function Home() {
                 <Row className="text-start">
                     <h4>Temporary Functions</h4>
                     <div>
-                        <Button className="mx-2" onClick={doLogout}>Logout</Button>
                         <Button className="mx-2" onClick={checkCookie}>Check Cookie</Button>
                     </div>
                     
